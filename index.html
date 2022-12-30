@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Request Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="apidinges" class="apidinges">
+  <h1>API Request Form</h1>
+  <form id="api-form">
+    <label for="url">API URL:</label><br>
+    <input type="text" id="url" name="url"><br>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="output"></div>
+
+  <button id="download-button">Download Output</button>
+
+</div>
+
+  <script>
+    // Get the form element
+    const form = document.getElementById('api-form');
+
+    // Add an event listener to the form to handle submit events
+    form.addEventListener('submit', event => {
+      // Prevent the form from submitting
+      event.preventDefault();
+
+      // Get the value of the "url" input field
+      const url = document.getElementById('url').value;
+
+      // Make an HTTP GET request to the API
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          // Get the output element
+          const output = document.getElementById('output');
+
+        //   // Clear the output element
+        //   output.innerHTML = '';
+
+          // Add the data from the API to the output element
+          output.innerHTML = JSON.stringify(data, null, 2);
+        })
+        .catch(error => console.error(error));
+    });
+  </script>
+  <script>
+    // Get the button element
+const button = document.getElementById('download-button');
+
+// Add an event listener to the button to handle click events
+button.addEventListener('click', event => {
+  // Get the output of the API request (assume this is stored in a variable called "output")
+  const output = '...';
+
+  // Create a new anchor element
+  const anchor = document.createElement('a');
+
+  // Set the anchor element's href to a data URL containing the output
+  anchor.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(output);
+
+  // Set the anchor element's download attribute to a file name
+  anchor.download = 'api-output.txt';
+
+  // Append the anchor element to the document
+  document.body.appendChild(anchor);
+
+  // Click the anchor element to initiate the download
+  anchor.click();
+
+  // Remove the anchor element from the document
+  document.body.removeChild(anchor);
+});
+
+  </script>
+
+
+  
+</body>
+<footer>
+    <p>Copyright &copy; 2022, met liefde gemaakt door Scott Verhage</p>
+  </footer>
+</html>

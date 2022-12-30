@@ -1,0 +1,127 @@
+/* Set the body font to a sans-serif font */
+body {
+    font-family: sans-serif;
+  }
+  
+  /* Set the background color to white */
+  body {
+    background-color: #fff;
+  }
+  
+  /* Set the header and footer background color to a light gray */
+  header,
+  footer {
+    background-color: #f2f2f2;
+  }
+  
+  /* Set the header and footer font color to a dark gray */
+  header,
+  footer {
+    color: #333;
+  }
+  
+  /* Set the header and footer font size to 18px */
+  header,
+  footer {
+    font-size: 18px;
+  }
+  
+  /* Set the header and footer padding to 20px */
+  header,
+  footer {
+    padding: 20px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  form, h1, button {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+  }
+
+
+  /* Center the text in the body element */
+body {
+    text-align: center;
+  }
+  
+  /* Center the text in the header and footer elements */
+  header,
+  footer {
+    text-align: center;
+  }
+
+  
+  p {
+    text-align: center;
+  }
+  
+
+  input {
+    margin-bottom: 5px;
+  }
+
+  button {
+    margin-bottom: 3px;
+  }
+
+  /* Set the button font to a sans-serif font */
+button {
+    font-family: sans-serif;
+  }
+  
+  /* Set the button background color to a light gray */
+  button {
+    background-color: #f2f2f2;
+  }
+  
+  /* Set the button border color to a darker gray */
+  button {
+    border-color: #ccc;
+  }
+  
+  /* Set the button font color to a dark gray */
+  button {
+    color: #333;
+  }
+  
+  /* Set the button font size to 18px */
+  button {
+    font-size: 18px;
+  }
+  
+  /* Set the button border radius to 4px */
+  button {
+    border-radius: 4px;
+  }
+  
+  /* Set the button padding to 10px */
+  button {
+    padding: 10px;
+  }
+  
+  /* Set the button margin to 10px */
+  button {
+    margin: 10px;
+  }
+
+  /* Set the button color to green when it is pressed */
+button:active {
+    color: green;
+  }
+  
+  /* Set a 1 second transition for the button color when it is pressed */
+  button:active {
+    transition: color 1s;
+  }
+  
+  
